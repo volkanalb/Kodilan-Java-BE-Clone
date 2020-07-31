@@ -3,7 +3,9 @@ package com.vvv.kodilan.view;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+@JsonPropertyOrder({ "current_page", "data", "first_page_url", "from", "last_page","last_page_url", "next_page_url", "path", "per_page", "prev_page_url", "to", "total" })
 public class TagView {
 	private List<Tag> tags;
 	private Integer currentPage;
