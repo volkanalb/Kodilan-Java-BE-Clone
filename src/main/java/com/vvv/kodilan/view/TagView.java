@@ -2,42 +2,47 @@ package com.vvv.kodilan.view;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class TagView {
-	private List<Tag> data;
-	private Integer current_page;
-	private String first_page_url;
+	private List<Tag> tags;
+	private Integer currentPage;
+	private String firstPageUrl;
 	private Integer from;
-	private Integer last_page;
-	private String last_page_url;
-	private String next_page_url;
+	private Integer lastPage;
+	private String lastPageUrl;
+	private String nextPageUrl;
 	private String path;
-	private Integer per_page;
-	private String prev_page_url;
+	private Integer perPage;
+	private String prevPageUrl;
 	private Integer to;
 	private Integer total;
 
-	public List<Tag> getData() {
-		return data;
+	@JsonProperty("data")
+	public List<Tag> getTags() {
+		return tags;
 	}
 
-	public void setData(List<Tag> data) {
-		this.data = data;
+	public void setTags(List<Tag> tags) {
+		this.tags = tags;
 	}
 
-	public Integer getCurrent_page() {
-		return current_page;
+	@JsonProperty("current_page")
+	public Integer getCurrentPage() {
+		return currentPage;
 	}
 
-	public void setCurrent_page(Integer current_page) {
-		this.current_page = current_page;
+	public void setCurrentPage(Integer currentPage) {
+		this.currentPage = currentPage;
 	}
 
-	public String getFirst_page_url() {
-		return first_page_url;
+	@JsonProperty("first_page_url")
+	public String getFirstPageUrl() {
+		return firstPageUrl;
 	}
 
-	public void setFirst_page_url(String first_page_url) {
-		this.first_page_url = first_page_url;
+	public void setFirstPageUrl(String firstPageUrl) {
+		this.firstPageUrl = firstPageUrl;
 	}
 
 	public Integer getFrom() {
@@ -48,28 +53,31 @@ public class TagView {
 		this.from = from;
 	}
 
-	public Integer getLast_page() {
-		return last_page;
+	@JsonProperty("last_page")
+	public Integer getLastPage() {
+		return lastPage;
 	}
 
-	public void setLast_page(Integer last_page) {
-		this.last_page = last_page;
+	public void setLastPage(Integer lastPage) {
+		this.lastPage = lastPage;
 	}
 
-	public String getLast_page_url() {
-		return last_page_url;
+	@JsonProperty("last_page_url")
+	public String getLastPageUrl() {
+		return lastPageUrl;
 	}
 
-	public void setLast_page_url(String last_page_url) {
-		this.last_page_url = last_page_url;
+	public void setLastPageUrl(String lastPageUrl) {
+		this.lastPageUrl = lastPageUrl;
 	}
 
-	public String getNext_page_url() {
-		return next_page_url;
+	@JsonProperty("next_page_url")
+	public String getNextPageUrl() {
+		return nextPageUrl;
 	}
 
-	public void setNext_page_url(String next_page_url) {
-		this.next_page_url = next_page_url;
+	public void setNextPageUrl(String nextPageUrl) {
+		this.nextPageUrl = nextPageUrl;
 	}
 
 	public String getPath() {
@@ -80,20 +88,22 @@ public class TagView {
 		this.path = path;
 	}
 
-	public Integer getPer_page() {
-		return per_page;
+	@JsonProperty("per_page")
+	public Integer getPerPage() {
+		return perPage;
 	}
 
-	public void setPer_page(Integer per_page) {
-		this.per_page = per_page;
+	public void setPerPage(Integer perPage) {
+		this.perPage = perPage;
 	}
 
-	public String getPrev_page_url() {
-		return prev_page_url;
+	@JsonProperty("prev_page_url")
+	public String getPrevPageUrl() {
+		return prevPageUrl;
 	}
 
-	public void setPrev_page_url(String prev_page_url) {
-		this.prev_page_url = prev_page_url;
+	public void setPrevPageUrl(String prevPageUrl) {
+		this.prevPageUrl = prevPageUrl;
 	}
 
 	public Integer getTo() {

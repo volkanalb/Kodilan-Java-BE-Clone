@@ -1,5 +1,8 @@
 package com.vvv.kodilan.view.enums;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+
 public enum POST_STATUS {
 	DISAPPROVED(0, "ONAYLANMADI"), APPROVED(1, "ONAYLANDI"), UNPUBLISHED(2, "YAYINLANMADI");
 
@@ -11,6 +14,19 @@ public enum POST_STATUS {
 		this.name = name;
 	}
 
+	@JsonCreator
+    public static POST_STATUS fromString(String id) {
+        if(id == null) return null;
+        else {
+        	for(POST_STATUS type:POST_STATUS.values()) {
+        		if(type.getId().toString().equals(id))
+        			return type;
+        	}
+        }
+		return null;
+    }
+	
+	@JsonValue
 	public Integer getId() {
 		return id;
 	}
