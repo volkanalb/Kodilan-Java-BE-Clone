@@ -1,4 +1,4 @@
-package com.vvv.kodilan.model;
+package com.vvv.kodilan.view;
 
 public class Company {
 	private String name;

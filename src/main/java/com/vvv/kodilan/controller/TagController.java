@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.vvv.kodilan.model.TagView;
 import com.vvv.kodilan.service.ITagService;
+import com.vvv.kodilan.view.TagView;
 
 @RestController
 @RequestMapping("tags")

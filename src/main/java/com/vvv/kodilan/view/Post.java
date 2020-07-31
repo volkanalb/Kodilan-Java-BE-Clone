@@ -1,10 +1,10 @@
-package com.vvv.kodilan.model;
+package com.vvv.kodilan.view;
 
 import java.util.Date;
 import java.util.List;
 
-import com.vvv.kodilan.model.enums.POST_STATUS;
-import com.vvv.kodilan.model.enums.POST_TYPE;
+import com.vvv.kodilan.view.enums.POST_STATUS;
+import com.vvv.kodilan.view.enums.POST_TYPE;
 
 
 public class Post {

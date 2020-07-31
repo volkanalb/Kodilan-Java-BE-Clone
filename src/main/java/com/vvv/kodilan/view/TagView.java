@@ -1,4 +1,4 @@
-package com.vvv.kodilan.model;
+package com.vvv.kodilan.view;
 
 import java.util.List;
 

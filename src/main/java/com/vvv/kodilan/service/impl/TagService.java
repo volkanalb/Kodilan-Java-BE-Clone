@@ -2,8 +2,8 @@ package com.vvv.kodilan.service.impl;
 
 import org.springframework.stereotype.Service;
 
-import com.vvv.kodilan.model.TagView;
 import com.vvv.kodilan.service.ITagService;
+import com.vvv.kodilan.view.TagView;
 
 @Service
 public class TagService implements ITagService {

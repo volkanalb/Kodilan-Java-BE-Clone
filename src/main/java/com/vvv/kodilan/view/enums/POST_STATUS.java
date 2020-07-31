@@ -1,4 +1,4 @@
-package com.vvv.kodilan.model.enums;
+package com.vvv.kodilan.view.enums;
 
 public enum POST_STATUS {
 	DISAPPROVED(0, "ONAYLANMADI"), APPROVED(1, "ONAYLANDI"), UNPUBLISHED(2, "YAYINLANMADI");

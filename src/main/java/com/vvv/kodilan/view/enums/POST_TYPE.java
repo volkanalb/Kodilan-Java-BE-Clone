@@ -1,4 +1,4 @@
-package com.vvv.kodilan.model.enums;
+package com.vvv.kodilan.view.enums;
 
 public enum POST_TYPE {
 	FULLTIME(1, "TAM ZAMANLI"), PARTTIME(2, "YARI ZAMANLI"), TRAINEE(3, "STAJYER"), FREELANCER(4, "FREELANCE");
