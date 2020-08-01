@@ -2,6 +2,7 @@ package com.vvv.kodilan.service.impl;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
@@ -18,7 +19,7 @@ public class TagService implements ITagService {
 		
 		ObjectMapper mapper = new ObjectMapper();
 		try {
-			File resource = new ClassPathResource("data/data-tagview-p1.json").getFile();
+			InputStream resource = new ClassPathResource("data/data-tagview-p1.json").getInputStream();
 			return mapper.readValue(resource, TagView.class);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
