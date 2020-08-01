@@ -3,6 +3,7 @@ package com.vvv.kodilan.service.impl;
 import java.io.File;
 import java.io.IOException;
 
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -14,12 +15,11 @@ public class TagService implements ITagService {
 
 	public TagView getTagData(Integer page) {
 		// TODO Check by page Id
-
-		File file = new File(this.getClass().getClassLoader().getResource("data/data-tagview-p1.json").getFile());
+		
 		ObjectMapper mapper = new ObjectMapper();
 		try {
-			TagView tv = mapper.readValue(file, TagView.class);
-			return tv;
+			File resource = new ClassPathResource("data/data-tagview-p1.json").getFile();
+			return mapper.readValue(resource, TagView.class);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
