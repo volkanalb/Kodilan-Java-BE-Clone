@@ -1,4 +1,4 @@
-package com.vvv.kodilan.view;
+package com.vvv.kodilan.view.pub;
 
 public class Location {
 	private String location;

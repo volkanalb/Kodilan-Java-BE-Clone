@@ -1,5 +1,7 @@
 package com.vvv.kodilan.service;
 
-public interface IPostService {
+import com.vvv.kodilan.view.pub.PostView;
 
+public interface IPostService {
+	PostView getPublicPostView(Integer page);
 }

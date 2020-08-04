@@ -1,4 +1,4 @@
-package com.vvv.kodilan.view;
+package com.vvv.kodilan.view.pub;
 
 public class Tag {
 	private String name;

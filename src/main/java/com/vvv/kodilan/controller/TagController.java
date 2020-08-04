@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.vvv.kodilan.service.ITagService;
-import com.vvv.kodilan.view.TagView;
+import com.vvv.kodilan.view.pub.TagView;
 
 @RestController
 @RequestMapping("tags")
@@ -18,7 +18,7 @@ public class TagController {
 
 	@GetMapping(value = "")
 	public TagView getTags(@RequestParam(value = "page", required = false, defaultValue = "1") Integer pageId) {
-		return tagService.getTagData(pageId);
+		return tagService.getPublicTagView(pageId);
 	}
 
 }
