@@ -1,4 +1,4 @@
-package com.vvv.kodilan.view;
+package com.vvv.kodilan.view.pub;
 
 import java.util.Date;
 import java.util.List;

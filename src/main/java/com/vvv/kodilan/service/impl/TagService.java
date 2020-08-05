@@ -1,31 +1,46 @@
 package com.vvv.kodilan.service.impl;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.vvv.kodilan.repository.ITagRepository;
 import com.vvv.kodilan.service.ITagService;
-import com.vvv.kodilan.view.TagView;
+import com.vvv.kodilan.view.pub.Tag;
+import com.vvv.kodilan.view.pub.TagView;
 
 @Service
 public class TagService implements ITagService {
 
-	public TagView getTagData(Integer page) {
-		// TODO Check by page Id
-		
+	@Autowired
+	private ITagRepository tagRepository;
+	
+	@Override
+	public TagView getPublicTagView(Integer page) {
 		ObjectMapper mapper = new ObjectMapper();
-		try {
-			InputStream resource = new ClassPathResource("data/data-tagview-p1.json").getInputStream();
-			return mapper.readValue(resource, TagView.class);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+
+		ClassPathResource cp = new ClassPathResource("data/data-tagview-p" + page + ".json");
+		if (cp.exists()) {
+			try {
+				InputStream resource = new ClassPathResource("data/data-tagview-p1.json").getInputStream();
+				return mapper.readValue(resource, TagView.class);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
-		return null;
+		TagView tv = new TagView();
+		tv.setTags(new ArrayList<Tag>());
+		tv.setCurrentPage(0);
+		tv.setLastPage(0);
+		tv.setTotal(0);
+		return tv;
+
 	}
 
 }
