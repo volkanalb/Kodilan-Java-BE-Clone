@@ -27,8 +27,7 @@ public class TagService implements ITagService {
 		ClassPathResource cp = new ClassPathResource("data/data-tagview-p" + page + ".json");
 		if (cp.exists()) {
 			try {
-				InputStream resource = new ClassPathResource("data/data-tagview-p1.json").getInputStream();
-				return mapper.readValue(resource, TagView.class);
+				return mapper.readValue(cp.getInputStream(), TagView.class);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
