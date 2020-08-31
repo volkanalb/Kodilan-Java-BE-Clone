@@ -1,6 +1,7 @@
 package com.vvv.kodilan.view.enums;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum POST_STATUS {
@@ -15,7 +16,7 @@ public enum POST_STATUS {
 	}
 
 	@JsonCreator
-    public static POST_STATUS fromString(String id) {
+    public static POST_STATUS fromString(@JsonProperty("status")String id) {
         if(id == null) return null;
         else {
         	for(POST_STATUS type:POST_STATUS.values()) {

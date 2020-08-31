@@ -1,6 +1,7 @@
 package com.vvv.kodilan.view.enums;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum POST_TYPE {
@@ -15,18 +16,18 @@ public enum POST_TYPE {
 	}
 	
 	@JsonCreator
-    public static POST_TYPE fromString(String id) {
+    public static POST_TYPE fromId(@JsonProperty("type")Integer id) {
         if(id == null) return null;
         else {
         	for(POST_TYPE type:POST_TYPE.values()) {
-        		if(type.getId().toString().equals(id))
+        		if(type.getId().equals(id))
         			return type;
         	}
         }
 		return null;
     }
 	
-	@JsonValue
+	
 	public Integer getId() {
 		return id;
 	}
