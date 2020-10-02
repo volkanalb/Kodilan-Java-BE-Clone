@@ -63,9 +63,9 @@ public class Post {
 			this.postStatus = POST_STATUS.fromString(status.toString());
 		}
 
-		if (type > 0) {
-			this.postType = POST_TYPE.fromString(status.toString());
-		}
+//		if (type > 0) {
+//			this.postType = POST_TYPE.fromId(status);
+//		}
 	}
 
 	@PrePersist
